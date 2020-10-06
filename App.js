@@ -6,7 +6,7 @@
  * @flow strict-local
  */
 
-import React, {useState, useContext} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -16,6 +16,7 @@ import {
   StatusBar,
   Image,
 } from 'react-native';
+import SplashScreen from 'react-native-splash-screen';
 import Button from './src/components/button';
 import TextInput from './src/components/textInput';
 import hello from './src/assets/hello.png';
@@ -30,6 +31,9 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 const App: () => React$Node = () => {
+  useEffect(() => {
+    SplashScreen.hide();
+  }, []);
   const [username, setusername] = useState('');
 
   const handleUserName = (text) => {

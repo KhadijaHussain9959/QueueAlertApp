@@ -1,5 +1,4 @@
 /* eslint-disable react-native/no-inline-styles */
-
 // -----PROPS IT TAKES-----------
 //  Text
 //  BackgroundColor
